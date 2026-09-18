@@ -1,0 +1,426 @@
+<html>
+<head>
+    <title>CampusRide | College Transport</title>
+
+    <link rel="stylesheet" href="kavi.css">
+</head>
+
+<body>
+    <header>
+
+        <div class="logo">
+            <span>🚌</span>
+            <h2>College Transport </h2>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#tracking">Track Bus</a>
+            <a href="#routes">Routes</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+<button class="login-btn" onclick="openLogin()">Login</button>    </header>
+
+
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                SMART COLLEGE TRANSPORT
+            </p>
+
+            <h1>
+                Travel Smart.<br>
+                <span>Travel Safe.</span>
+            </h1>
+
+            
+
+            <div class="hero-buttons">
+
+                <button class="track-btn">
+                    📍 Track Your Bus
+                </button>
+
+                <button class="route-btn">
+                    🗺️ View Routes
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+
+        <div class="hero-image">
+
+            <img src="c:\Users\kavib\Downloads\ChatGPT Image Sep 18, 2026, 09_51_07 AM.png" alt="College Bus">
+
+            
+        </div>
+
+    </section>
+
+    <section class="statistics">
+
+        <div class="stat-card">
+            <h2>25+</h2>
+            <p>College Buses</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>50+</h2>
+            <p>Routes</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>2000+</h2>
+            <p>Students</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>100%</h2>
+            <p>Safe Transport</p>
+        </div>
+
+    </section>
+
+
+
+    <section id="services" class="services">
+
+        <div class="section-title">
+
+            <h2>Our Smart Services</h2>
+
+            <p>
+                Everything you need for a better college travel experience.
+            </p>
+
+        </div>
+
+
+        <div class="service-container">
+
+            <article class="service-card">
+
+                <div class="service-icon">📍</div>
+
+                <h3>Live Bus Tracking</h3>
+
+                <p>
+                    Track the current location of your college bus using GPS.
+                </p>
+
+            </article>
+
+
+            <article class="service-card">
+
+                <div class="service-icon">🚌</div>
+
+                <h3>Bus Management</h3>
+
+                <p>
+                    Manage buses, drivers, capacity and transport details.
+                </p>
+
+            </article>
+
+
+            <article class="service-card">
+
+                <div class="service-icon">🗺️</div>
+
+                <h3>Route Management</h3>
+
+                <p>
+                    View bus routes, stops and estimated arrival times.
+                </p>
+
+            </article>
+
+
+            <article class="service-card">
+
+                <div class="service-icon">👨‍🎓</div>
+
+                <h3>Student Management</h3>
+
+                <p>
+                    Manage student transport and pickup point information.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+   <!-- ================= LIVE BUS TRACKING ================= -->
+
+<section id="tracking" class="tracking">
+
+    <div class="section-title">
+
+        <h2>🚌 Live Bus Tracking</h2>
+
+        <p>
+            Select your bus number to track the bus
+        </p>
+
+    </div>
+
+
+    <!-- Bus Selection -->
+
+    <div class="tracking-card">
+
+        <div class="tracking-icon">
+            🚌
+        </div>
+
+        <h3>Track Your Bus</h3>
+
+        <p>
+            Choose your bus number to view its current location.
+        </p>
+
+
+        <label for="trackBusSelect">
+            Select Bus Number
+        </label>
+
+        <select id="trackBusSelect">
+
+            <option value="">
+                -- Select Bus Number --
+            </option>
+
+            <option value="bus1">
+                Bus 81
+            </option>
+
+            <option value="bus2">
+                Bus 71
+            </option>
+
+            <option value="bus3">
+                Bus 80
+            </option>
+
+            <option value="bus4">
+                Bus 82
+            </option>
+
+            <option value="bus5">
+                Bus 65
+            </option>
+
+        </select>
+
+
+        <button id="startTrackingBtn">
+            📍 Track Bus
+        </button>
+
+    </div>
+
+
+    <!-- Tracking Result -->
+
+    <div id="trackingResult" class="tracking-result">
+
+        <h3>🟢 Live Bus Tracking</h3>
+
+        <div class="bus-info">
+
+            <h4 id="selectedBusName">
+                Bus 01
+            </h4>
+
+            <p>
+                📍 Current Location:
+                <span id="busLocation">
+                    Updating...
+                </span>
+            </p>
+
+            <p>
+                🛣️ Route:
+                <span id="busRoute">
+                    Updating...
+                </span>
+            </p>
+
+            <p>
+                ⏱️ Estimated Arrival:
+                <span id="busETA">
+                    Updating...
+                </span>
+            </p>
+
+        </div>
+
+
+        <!-- Map Area -->
+
+        <div class="map-box">
+
+            <div class="map-placeholder">
+
+                🗺️
+
+                <h3>Live Map</h3>
+
+                <p>
+                    🚌 Bus location will appear here
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section id="routes" class="routes">
+
+    <div class="section-title">
+
+        <h2>🚌 Find Your Bus Route</h2>
+
+        <p>
+            Select your bus number to view the route
+        </p>
+
+    </div>
+
+    <div class="bus-selection">
+
+        <label for="busSelect">
+            Select Bus Number
+        </label>
+
+        <select id="busSelect">
+
+            <option value="">
+                -- Select Bus Number --
+            </option>
+
+            <option value="bus1">Bus 81</option>
+
+            <option value="bus2">Bus 71</option>
+
+            <option value="bus3">Bus 80</option>
+
+            <option value="bus4">Bus 82</option>
+
+            <option value="bus5">Bus 65</option>
+
+        </select>
+
+    </div>
+
+
+    <div id="routeResult" class="route-result">
+
+        <h3>🗺️ Your Bus Route</h3>
+
+        <p id="routeText">
+            Please select a bus number
+        </p>
+
+    </div>
+
+</section>
+
+
+    <section id="contact" class="contact">
+
+        <h2>Need Help?</h2>
+
+        <p>
+            Contact the college transport management team.
+        </p>
+
+        <p>📞 +91 98765 43210</p>
+
+        <p>✉️ EGSPEC8transport@gmail.com</p>
+
+    </section>
+
+
+
+    <footer>
+
+        <h3>🚌 CampusRide</h3>
+
+        <p>
+            Smart College Transport Management System
+        </p>
+
+        <p>
+            © 2026 CampusRide. All Rights Reserved.
+        </p>
+
+    </footer>
+    
+<script src="kavi.js"></script>
+
+<div id="loginPopup" class="login-popup">
+
+    <div class="login-box">
+
+        <span class="close-btn" onclick="closeLogin()">×</span>
+
+        <div class="login-icon">
+            🚌
+        </div>
+
+        <h2>CampusRide Login</h2>
+
+        <p>Login to manage your college transport</p>
+
+        <form onsubmit="loginUser(event)">
+
+            <label>Name</label>
+            <input type="text"
+                   id="userName"
+                   placeholder="Enter your name"
+                   required>
+
+            <label>Bus Number</label>
+            <input type="text"
+                   id="busNumber"
+                   placeholder="Enter bus number"
+                   required>
+
+            <label>Password</label>
+            <input type="password"
+                   id="password"
+                   placeholder="Enter password"
+                   required>
+
+            <button type="submit" class="login-submit">
+                Login
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
